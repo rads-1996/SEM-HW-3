@@ -25,7 +25,7 @@ final class UnitTest: XCTestCase {
         //When
         let checkTemp = try JSONDecoder().decode(Weather.self, from: testData)
         //Then
-        XCTAssertTrue((checkTemp.main.temp) >= 27.7007697012432)
+        XCTAssertTrue((checkTemp.main.temp) >= 27.70076970124)
         print(checkTemp)
         
     }
