@@ -45,7 +45,7 @@ let testData = """
 {
     "main" :
     {
-        "temp" : 56.70076970124
+        "temp" : 56.7007697012434
     }
 }
 """.data(using: .utf8)!
