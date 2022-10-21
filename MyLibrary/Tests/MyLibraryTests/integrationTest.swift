@@ -20,7 +20,7 @@ final class integrationTest: XCTestCase {
         let checkWeather = WeatherServiceImpl()
         //When
         let result = try await checkWeather.getTemperature()
-        //print(result)
+        print(result)
         //Then
         XCTAssertNotNil(result)
         
