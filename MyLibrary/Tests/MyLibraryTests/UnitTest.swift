@@ -19,10 +19,6 @@ final class UnitTest: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
         //et myLibrary = MyLibrary(weatherService: mockWeatherService)
         // When
-        //let isLuckyNumber = await myLibrary.isLucky(8)
-        //let temps = WeatherServiceImpl()
-        //let number  = try await temps.getTemperature()
-        //When
         let checkTemp = try JSONDecoder().decode(Weather.self, from: testData)
         //Then
         XCTAssertTrue((checkTemp.main.temp) >= 27.7007697012432)
