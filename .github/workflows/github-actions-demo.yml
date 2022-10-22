@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@radhika/add-tests
+      - uses: actions/checkout@master
       - name: Build
         run: swift build
       - name: Run tests
