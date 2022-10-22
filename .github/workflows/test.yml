@@ -1,0 +1,32 @@
+name: Swift
+
+on:
+  [push]
+    
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        node_version: [16.17.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node_version }}
+    - name: Run Node
+      working-directory: ./MockApi
+      run: npm install
+    - name: Run Node test
+      working-directory: ./MockApi
+      run: npm run test
+    
+    - name: Build
+      working-directory: ./MyLibrary
+      run: swift build -v
+    - name: Run tests
+      working-directory: ./MyLibrary
+      run: swift test -v
