@@ -20,7 +20,7 @@ jobs:
         
     - name: Run Node
       working-directory: ./MockApi
-      run: node weather.js
+      run: node weather.js &
     
     - name: Build
       working-directory: ./MyLibrary
